@@ -1,6 +1,6 @@
 # QR Code Generator para Adobe Illustrator
 
-Versao atual: `1.3.1`
+Versao atual: `1.3.2`
 
 Painel CEP local para gerar QR Codes offline e inserir o resultado no documento ativo do Illustrator como SVG vetorial editavel ou PNG raster.
 

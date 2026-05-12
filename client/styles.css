@@ -112,9 +112,18 @@ fieldset:disabled input {
 }
 
 .settings-row {
-  display: grid;
-  grid-template-columns: minmax(96px, 0.85fr) minmax(194px, 1.15fr);
+  display: flex;
   gap: 8px;
+  min-width: 0;
+}
+
+.settings-row > .field-stack:first-child {
+  flex: 0 0 132px;
+}
+
+.settings-row > .dimension-field {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .field-stack {
@@ -123,12 +132,18 @@ fieldset:disabled input {
 }
 
 .dimension-control {
-  display: grid;
-  grid-template-columns: minmax(88px, 1fr) 68px;
+  display: flex;
   gap: 4px;
+  min-width: 0;
+}
+
+.dimension-control .ui-select {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .dimension-value {
+  flex: 0 0 70px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 24px;
   align-items: center;
@@ -161,6 +176,7 @@ fieldset:disabled input {
 
 .ui-select-button {
   width: 100%;
+  min-width: 0;
   height: 24px;
   display: flex;
   align-items: center;
@@ -171,11 +187,15 @@ fieldset:disabled input {
   color: var(--text);
   background: var(--control-bg);
   cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   user-select: none;
 }
 
 .ui-select-button::after {
   content: "";
+  flex: 0 0 auto;
   width: 0;
   height: 0;
   border-left: 4px solid transparent;
