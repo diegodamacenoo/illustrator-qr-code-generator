@@ -15,6 +15,8 @@ chmod +x scripts/*.sh
 
 Depois reinicie o Illustrator e abra `Window > Extensions > QR Code Generator`.
 
+Se uma aba antiga chamada `QR Code SVG` estiver aberta, feche essa aba e reinicie o Illustrator. Essa era a extensao anterior e pode ficar em cache depois da remocao/renomeacao.
+
 ## ZXP local
 
 O empacotamento ZXP exige `ZXPSignCmd` e certificado `.p12`. Os arquivos em `dist/` sao locais e nao devem ser publicados no Git.

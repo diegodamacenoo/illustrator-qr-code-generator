@@ -9,7 +9,11 @@ mkdir -p "$(dirname "$DEST_DIR")"
 rm -rf "$DEST_DIR"
 mkdir -p "$DEST_DIR"
 
-rsync -a --exclude '.DS_Store' "$ROOT_DIR/" "$DEST_DIR/"
+rsync -a \
+  --exclude '.DS_Store' \
+  --exclude '.git' \
+  --exclude 'dist' \
+  "$ROOT_DIR/" "$DEST_DIR/"
 
 echo "Extensao instalada em:"
 echo "$DEST_DIR"
