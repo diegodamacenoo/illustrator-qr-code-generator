@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="panel-shell">
+    <form id="qr-form" class="control-group" novalidate>
+      <label class="field-label" for="qr-input">Link</label>
+      <input id="qr-input" name="link" type="text" autocomplete="url" placeholder="https://example.com">
+
+      <div class="settings-row">
+        <div class="field-stack">
+          <label class="field-label" for="format-select">Formato</label>
+          <select id="format-select" class="native-select" name="format" tabindex="-1" aria-hidden="true">
+            <option value="svg">SVG</option>
+            <option value="png">PNG</option>
+          </select>
+        </div>
+
+        <fieldset id="dimension-fieldset" class="field-stack dimension-field" disabled>
+          <label class="field-label" for="dimension-select">Dimensionar</label>
+          <div class="dimension-control">
+            <select id="dimension-select" class="native-select" name="dimension" tabindex="-1" aria-hidden="true">
+              <option value="1x">1x</option>
+              <option value="2x">2x</option>
+              <option value="3x" selected>3x</option>
+              <option value="4x">4x</option>
+              <option value="1.5x">1,5x</option>
+              <option value="0.5x">0,5x</option>
+              <option value="0.75x">0,75x</option>
+              <option value="width">Largura</option>
+              <option value="height">Altura</option>
+              <option value="resolution">Resolução</option>
+            </select>
+            <div id="dimension-value-wrap" class="dimension-value">
+              <input id="dimension-value" name="dimensionValue" type="number" min="1" step="1" inputmode="decimal" disabled>
+              <span id="dimension-unit">px</span>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <section id="preview" class="preview" aria-label="Preview do QR Code gerado">
+        <div id="preview-box" class="preview-box"></div>
+        <small id="encoded-text"></small>
+      </section>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+
+      <footer class="action-bar">
+        <button id="insert-button" type="submit" disabled>Inserir no documento</button>
+      </footer>
+    </form>
+  </main>
+
+  <script src="./CSInterface.js"></script>
+  <script src="./qrcode.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
