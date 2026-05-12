@@ -113,7 +113,7 @@ fieldset:disabled input {
 
 .settings-row {
   display: grid;
-  grid-template-columns: minmax(88px, 0.8fr) minmax(150px, 1.2fr);
+  grid-template-columns: minmax(96px, 0.85fr) minmax(194px, 1.15fr);
   gap: 8px;
 }
 
@@ -124,13 +124,13 @@ fieldset:disabled input {
 
 .dimension-control {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(88px, 1fr) 68px;
   gap: 4px;
 }
 
 .dimension-value {
   display: grid;
-  grid-template-columns: 58px 28px;
+  grid-template-columns: minmax(0, 1fr) 24px;
   align-items: center;
   border: 1px solid var(--control-border);
   background: var(--control-bg);
@@ -139,7 +139,8 @@ fieldset:disabled input {
 .dimension-value input {
   height: 22px;
   border: 0;
-  padding: 0 4px;
+  min-width: 0;
+  padding: 0 3px;
   background: transparent;
 }
 
