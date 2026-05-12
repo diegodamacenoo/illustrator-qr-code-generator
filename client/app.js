@@ -182,6 +182,7 @@
     dimensionFieldset.disabled = !png;
     dimensionValueWrap.hidden = false;
     dimensionValue.disabled = !png || !custom;
+    dimensionValueWrap.classList.toggle("is-disabled", dimensionValue.disabled);
 
     if (dimensionSelect.value === "resolution") {
       dimensionUnit.textContent = "ppi";

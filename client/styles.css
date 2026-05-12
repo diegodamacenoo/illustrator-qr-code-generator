@@ -44,14 +44,14 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   padding: 10px;
 }
 
 .field-label {
   color: var(--text-dim);
   font-size: 11px;
-  line-height: 1;
+  line-height: 12px;
 }
 
 input,
@@ -128,7 +128,7 @@ fieldset:disabled input {
 
 .field-stack {
   display: grid;
-  gap: 4px;
+  gap: 3px;
 }
 
 .dimension-control {
@@ -151,6 +151,12 @@ fieldset:disabled input {
   background: var(--control-bg);
 }
 
+.dimension-value.is-disabled {
+  border-color: var(--control-border);
+  background: var(--panel-bg-raised);
+  opacity: 0.48;
+}
+
 .dimension-value input {
   height: 22px;
   border: 0;
@@ -161,12 +167,17 @@ fieldset:disabled input {
 
 .dimension-value input:disabled {
   color: var(--text-dim);
+  cursor: default;
 }
 
 .dimension-value span {
   color: var(--text-muted);
   font-size: 11px;
   text-align: center;
+}
+
+.dimension-value.is-disabled span {
+  color: var(--text-dim);
 }
 
 .ui-select {

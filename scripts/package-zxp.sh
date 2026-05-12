@@ -29,6 +29,9 @@ mkdir -p "$STAGE_DIR"
 
 rsync -a \
   --exclude '.DS_Store' \
+  --exclude '*.ai' \
+  --exclude '~ai-*' \
+  --exclude '*.tmp' \
   --exclude 'dist' \
   --exclude '.git' \
   "$ROOT_DIR/CSXS" \

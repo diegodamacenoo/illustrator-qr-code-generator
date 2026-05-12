@@ -9,8 +9,10 @@
 <body>
   <main class="panel-shell">
     <form id="qr-form" class="control-group" novalidate>
-      <label class="field-label" for="qr-input">Link</label>
-      <input id="qr-input" name="link" type="text" autocomplete="url" placeholder="https://example.com">
+      <div class="field-stack">
+        <label class="field-label" for="qr-input">Link</label>
+        <input id="qr-input" name="link" type="text" autocomplete="url" placeholder="https://example.com">
+      </div>
 
       <div class="settings-row">
         <div class="field-stack">
@@ -36,7 +38,7 @@
               <option value="height">Altura</option>
               <option value="resolution">Resolução</option>
             </select>
-            <div id="dimension-value-wrap" class="dimension-value">
+            <div id="dimension-value-wrap" class="dimension-value is-disabled">
               <input id="dimension-value" name="dimensionValue" type="number" min="1" step="1" inputmode="decimal" disabled>
               <span id="dimension-unit">px</span>
             </div>
